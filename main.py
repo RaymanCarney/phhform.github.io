@@ -2,6 +2,18 @@ import customtkinter as ctk
 from tkinter import messagebox
 import csv
 from datetime import datetime
+from flask import Flask
+
+# Now you can create a Flask application instance
+app = Flask(__name__)
+
+# Define routes and other Flask application logic here
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 def check_in():
     guest_name = entry_name.get()
